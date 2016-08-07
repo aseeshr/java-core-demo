@@ -1,6 +1,7 @@
 package com.test.client;
 
 import java.util.List;
+import java.util.Scanner;
 
 import com.test.models.Employee;
 import com.test.service.EmployeeService;
@@ -17,11 +18,14 @@ public class RunEmployee {
 		emp1.setAddress("NewRoad");
 		emp1.setPhone("989898");
 
-		emp.setId(2);
-		emp.setFirstName("RamJee");
-		emp.setLastName("Shrestha");
-		emp.setPhone("92199999");
-		emp.setAddress("Nepal");
+//		emp.setId(2);
+//		emp.setFirstName("RamJee");
+//		emp.setLastName("Shrestha");
+//		emp.setPhone("92199999");
+//		emp.setAddress("Nepal");
+		Scanner sc = new Scanner(System.in);
+		
+		
 
 		EmployeeService es = new EmployeeServiceImpl();
 		es.addEmployee(emp1);
@@ -38,16 +42,16 @@ public class RunEmployee {
 
 		}
 		// delete Employee
-		System.out.println("After Deleted ");
+//		System.out.println("After Deleted ");
 		es.deleteEmployee(1);
-		List<Employee> eList1 = es.getEmployee();
-		for (Employee e : eList1) {
-			System.out.println("Id =" + e.getId());
-			System.out.println("First Name =" + e.getLastName());
-			System.out.println("Phone no =" + e.getPhone());
-			System.out.println("Address =" + e.getAddress());
-			System.out.println("****************");
-
-		}
+//		List<Employee> eList1 = es.getEmployee();
+//		for (Employee e : eList1) {
+//			System.out.println("Id =" + e.getId());
+//			System.out.println("First Name =" + e.getLastName());
+//			System.out.println("Phone no =" + e.getPhone());
+//			System.out.println("Address =" + e.getAddress());
+//			System.out.println("****************");
+//
+//		}
 	}
 }
